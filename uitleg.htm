@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NeuroVision Labs</title>
+    <link rel="stylesheet" href="stijl.css">
+</head>
+
+<body>
+
+<h1>NeuroVision Labs</h1>
+<p>Slimme beeldanalyse met AI voor de industrie.</p>
+
+<hr>
+
+<h2>Over ons</h2>
+<p>
+NeuroVision Labs ontwikkelt slimme camerasystemen die beelden analyseren met
+artificiële intelligentie. Onze technologie helpt bedrijven om processen
+te automatiseren en fouten te detecteren.
+</p>
+
+<hr>
+
+<h2>Vraag een demo aan</h2>
+<form>
+    Naam:<br>
+    <input type="text"><br><br>
+
+    E-mail:<br>
+    <input type="email"><br><br>
+
+    Bedrijf:<br>
+    <input type="text"><br><br>
+
+    Bericht:<br>
+    <textarea rows="4" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Verstuur">
+</form>
+
+<hr>
+
+<h2>Contacteer ons</h2>
+<form>
+    Naam:<br>
+    <input type="text"><br><br>
+
+    E-mail:<br>
+    <input type="email"><br><br>
+
+    Bericht:<br>
+    <textarea rows="4" cols="40"></textarea><br><br>
+
+    <input type="submit" value="Verzenden">
+</form>
+
+<hr>
+
+<h2>Simulatie van beeldanalyse</h2>
+<p>Upload een bestand voor analyse:</p>
+
+<input type="file" id="fileInput"><br><br>
+
+<button onclick="analyse()">Start analyse</button>
+
+<p id="resultaat"></p>
+
+<p>Was deze analyse nuttig?</p>
+<button onclick="feedback('Ja')">Ja</button>
+<button onclick="feedback('Nee')">Nee</button>
+
+<p id="feedbackResult"></p>
+
+<script>
+function analyse() {
+    var file = document.getElementById("fileInput").value;
+
+    if(file === "") {
+        document.getElementById("resultaat").innerHTML =
+        "Gelieve eerst een bestand te uploaden.";
+    } else {
+        document.getElementById("resultaat").innerHTML =
+        "Analyse voltooid: mogelijk defect gedetecteerd.";
+    }
+}
+
+function feedback(antwoord) {
+    document.getElementById("feedbackResult").innerHTML =
+    "Bedankt voor je feedback: " + antwoord;
+}
+</script>
+
+<hr>
+
+<h2>Nieuwsbrief</h2>
+<form>
+    E-mail:<br>
+    <input type="email"><br><br>
+    <input type="submit" value="Inschrijven">
+</form>
+
+</body>
+</html>
